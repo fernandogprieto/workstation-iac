@@ -1,0 +1,35 @@
+---
+# Main playbook — ansible-pull expects this file (local.yml) by default
+# Usage:
+#   ansible-playbook local.yml --ask-become-pass
+#   ansible-pull -U https://github.com/fernandogprieto/workstation-iac.git
+
+- hosts: localhost
+  connection: local
+  become: true
+
+  pre_tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+  roles:
+    - base
+    - devtools
+    - dotfiles
+
+  post_tasks:
+    - name: Set up ansible-pull cron job
+      cron:
+        name: "ansible-pull workstation config"
+        minute: "*/30"
+        job: >
+          /usr/bin/ansible-pull
+          -U {{ git_repo_url }}
+          -d /opt/workstation-iac
+          --accept-host-key
+          >> /var/log/ansible-pull.log 2>&1
+        user: root
+        state: "{{ 'present' if enable_cron_pull else 'absent' }}"
+      when: git_repo_url is defined and git_repo_url != ""
