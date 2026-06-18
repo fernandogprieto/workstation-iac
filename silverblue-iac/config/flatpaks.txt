@@ -1,0 +1,15 @@
+# my GUI apps
+com.spotify.Client
+
+com.github.tchx84.Flatseal
+
+com.microsoft.Edge
+com.google.Chrome
+com.discordapp.Discord
+com.obsproject.Studio
+org.videolan.VLC
+org.signal.Signal
+org.gimp.GIMP
+com.slack.Slack
+com.mattjakeman.ExtensionManager
+com.anydesk.Anydesk

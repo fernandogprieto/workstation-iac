@@ -1,0 +1,7 @@
+# System-level packages layered with rpm-ostree
+# Only things that NEED host integration. Keep minimal!
+
+vim
+tmux
+gnome-tweaks
+google-noto-sans-cjk-fonts 

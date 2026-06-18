@@ -1,0 +1,7 @@
+# Gnome extensions (install via Extension Manager, then enable)
+
+appindicatorsupport@rgcjonas.gmail.com # system tray icons
+Vitals@CoreCoding.com                 # CPU/temp/memory in top bar
+background-logo@fedorahosted.org        
+weatherpanel@attentivecoder 
+
