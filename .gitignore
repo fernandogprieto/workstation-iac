@@ -1,3 +1,28 @@
+# VS Code (you sync settings via repo - keep these, but ignore local junk)
+.vscode/.ropeproject
+*.code-workspace
+
+# Python (you have python3 tooling)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (if any tooling uses it)
+node_modules/
+
+# Backups and temp
+.dotfiles-backup/
+*.bak
+*.old
+*.tmp
+*~
+*.swp
+
+# Generated snapshots (your capture scripts)
+config/*.current
+config/dconf-backup.ini
+
 # Terraform
 terraform/.terraform/
 terraform/.terraform.lock.hcl
@@ -5,16 +30,36 @@ terraform/*.tfstate
 terraform/*.tfstate.backup
 terraform/terraform.tfvars
 terraform/.terraform.tfstate.lock.info
+terraform/crash.log
+terraform/override.tf
+terraform/*_override.tf
+*.tfvars          # broaden: ALL tfvars, not just terraform/ folder
+!example.tfvars   # but allow an example one if you have it
 
 # Ansible
 *.retry
+vault_pass*
+*.vault_pass
+inventory/hosts.local
+
+
+# Cloud provider credentials (you use AWS/Azure/GCP/DO)
+.aws/credentials
+*.kubeconfig
+kubeconfig
+.kube/config
+
+# Synergy (from your setup - has certs/keys)
+**/SSL/
+synergyCert.pem
+**/Synergy/db.json
 
 # Secrets
 *.vault
 *.pem
 *.key
-id_rsa
-id_ed25519
+id_*
+*.pub
 
 # OS
 .DS_Store
