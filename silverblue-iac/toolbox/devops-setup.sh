@@ -6,7 +6,7 @@
 set -uo pipefail
 
 echo "==> Installing base CLI tools..."
-sudo dnf install -y htop btop git jq tmux python3 golang ansible shellcheck bat fzf ripgrep xdg-utils vim curl gnome-keyring libsecret
+sudo dnf install -y htop btop git jq tmux python3 golang ansible snsible-lint hellcheck bat fzf ripgrep xdg-utils vim curl gnome-keyring libsecret
 
 echo "==> Installing HashiCorp tools (terraform, vault)..."
 sudo dnf install -y dnf-plugins-core
