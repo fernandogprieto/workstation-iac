@@ -13,3 +13,4 @@ org.gimp.GIMP
 com.slack.Slack
 com.mattjakeman.ExtensionManager
 com.anydesk.Anydesk
+us.zoom.Zoom
