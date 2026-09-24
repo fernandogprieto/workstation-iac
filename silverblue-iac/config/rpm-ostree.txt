@@ -5,3 +5,5 @@ vim
 tmux
 gnome-tweaks
 google-noto-sans-cjk-fonts 
+gparted
+
